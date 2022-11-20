@@ -1,10 +1,13 @@
-const removeFromArray = function() {
-  let arr = arguments[0];
-  len = arguments.length -1;
-  for(let j=1;j<len;j++)
-    for(let i=0;i<arr.length-1;i++) 
-      if(arr[i]==arguments[j]) arr.splice(i,1);
+const removeFromArray = function(arr,...Args) {
+
+
+  for(let i = 0;i<Args.length ;i++){
+    for(let j = 0; j<arr.length  ; j++){
+      if(arr[j]==Args[i]) arr.splice(j,1);
+    }
+  }
   return arr;
+
 };
 
 // Do not edit below this line
